@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+        h2 {
+          text-align: center;
+        }
+      
+
+        tr, td, th {
+          border: 1px solid #dddddd;
+          text-align: center;
+          padding: 8px;
+        }
+        
+        th{
+          color: cornflowerblue;
+        }
+
+
+
+
+
+        </style>
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+            <v-card
+            flat
+            light
+            height = "64px"
+            tile
+            mb-5
+            >
+            <v-toolbar dark color = "#6495ED">
+        
+              <v-toolbar-title class = "title" > <a href = "/" style = "text-decoration: None" class = "text-white">Sustech</a></v-toolbar-title>
+         
+              <v-spacer></v-spacer>
+              <v-btn style = "text-decoration: None" href = "#" text>
+                    <span mr-5>Admin</span>
+              </v-btn>
+              <v-btn style = "text-decoration: None" href = "#" text>
+                    <span mr-5>Home</span>
+              </v-btn>
+              <v-btn style = "text-decoration: None" href = "#" text>
+                    <span>Logout</span>
+              </v-btn>
+
+            </v-toolbar>
+          </v-card>
+  <v-card-text>
+<v-container>
+    <form action="login.php" method="post">
+      <v-layout column>
+        <v-flex mt-3>
+      
+        <v-text-field
+        color = "pink"
+        name = 'username'
+        label="Username"
+        required
+        prepend-icon="face">
+      </v-text-field>
+      </v-flex>
+      <v-flex mt-3>
+      
+      <v-text-field
+      color = "pink"
+      name='password'
+      :type="'password'"
+        label="Password"
+        required
+        prepend-icon="storage">
+      </v-text-field>
+      
+      </v-flex>
+      
+      <v-flex text-center mt-3 mb-4>
+      
+      <v-btn  color="pink" type="submit" name="submit" value="Login">Login</v-btn>
+      </v-flex>                    
+      </v-layout>
+    </form>
+</v-container>
+</v-card-text>
+    </v-app>
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+    
+  </script>
+
+<script>
+    export default {
+      data: () => ({
+        date: new Date().toISOString().substr(0, 7),
+        menu: false,
+        menu1: false,
+      }),
+    }
+  </script>
+</body>
+</html>
+
+
+
+
